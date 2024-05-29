@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: bot
+  config:
+    import: optional:file:.env[.properties]
+
+server:
+  port: 8086
+
+logging:
+  config: classpath:logback.xml
+
+app:
+  vk-config:
+    api: https://api.vk.com
+    version: ${VK_API_VERSION}
+    access-token: ${VK_ACCESS_TOKEN}
+    confirmation-token: ${VK_CONFIRMATION_TOKEN}
+    group-id: ${VK_GROUP_ID}
+    callback-response: ok
